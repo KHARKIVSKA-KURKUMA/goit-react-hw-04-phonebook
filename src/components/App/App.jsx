@@ -12,7 +12,7 @@ import ContactForm from '../ContactForm';
 import { nanoid } from 'nanoid';
 import ContactList from '../ContactList';
 import Filter from 'components/Filter/Filter';
-import useLocalStorage from 'components/hooks/useLocalStorage';
+import useLocalStorage from 'hooks/useLocalStorage';
 
 const App = () => {
   /* ---------------------------------- STATE --------------------------------- */
