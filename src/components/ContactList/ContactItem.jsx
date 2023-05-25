@@ -9,8 +9,6 @@ import {
   Input,
 } from './Contact.styled';
 import { useState } from 'react';
-import useLocalStorage from 'hooks/useLocalStorage';
-import { nanoid } from 'nanoid';
 
 const ContactListItem = props => {
   /* ---------------------------------- STATE --------------------------------- */
