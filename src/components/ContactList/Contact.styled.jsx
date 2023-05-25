@@ -5,7 +5,7 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 500px;
   padding: 20px;
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -39,6 +39,38 @@ const DeleteButton = styled.button`
   border: none;
   border-radius: 4px;
   padding: 6px 10px;
-  cursor: pointer;
+  width: 65px;
 `;
-export { List, Items, Name, Number, DeleteButton, Container };
+const EditButton = styled.button`
+  background-color: #e5ff00;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  width: 65px;
+`;
+const BtnWrap = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 0;
+`;
+const Input = styled.input`
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 150px;
+  margin-right: 6px;
+`;
+export {
+  List,
+  Items,
+  Name,
+  Number,
+  DeleteButton,
+  Container,
+  EditButton,
+  BtnWrap,
+  Input,
+};

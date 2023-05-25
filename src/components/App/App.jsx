@@ -40,7 +40,21 @@ const App = () => {
   const deleteContact = contactId => {
     setContacts(prev => prev.filter(contact => contact.id !== contactId));
   };
-
+  /* ------------------------------ EDIT CONTACT ------------------------------ */
+  const editContact = contact => {
+    if (contacts.find(item => item.name === contact.name)) {
+      toast.error(`${contact.name} is already in your contacts!`);
+    } else {
+      setContacts(prev =>
+        prev.map(el => {
+          if (el.id === contact.id) {
+            return contact;
+          }
+          return el;
+        })
+      );
+    }
+  };
   /* -------------------------- GET FILTERED CONTACTS ------------------------- */
   const getFilteredContacts = () => {
     const normalizedFilter = filterText.toLowerCase();
@@ -64,7 +78,8 @@ const App = () => {
           <ContactWrap>
             <ContactList
               contacts={getFilteredContacts()}
-              onClick={deleteContact}
+              onDeleteClick={deleteContact}
+              onEditClick={editContact}
             ></ContactList>
           </ContactWrap>
         ) : (

@@ -16,7 +16,7 @@ const SubTitle = styled.h2`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
   gap: 30px;
