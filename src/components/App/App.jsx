@@ -42,18 +42,14 @@ const App = () => {
   };
   /* ------------------------------ EDIT CONTACT ------------------------------ */
   const editContact = contact => {
-    if (contacts.find(item => item.name === contact.name)) {
-      toast.error(`${contact.name} is already in your contacts!`);
-    } else {
-      setContacts(prev =>
-        prev.map(el => {
-          if (el.id === contact.id) {
-            return contact;
-          }
-          return el;
-        })
-      );
-    }
+    setContacts(prev =>
+      prev.map(el => {
+        if (el.id === contact.id) {
+          return contact;
+        }
+        return el;
+      })
+    );
   };
   /* -------------------------- GET FILTERED CONTACTS ------------------------- */
   const getFilteredContacts = () => {
